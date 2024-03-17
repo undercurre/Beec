@@ -1,18 +1,16 @@
 import router from '@ohos.router';
+import TabBar from '../components/TabBar';
 
 let username: string = router.getParams()['username']
 
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World111'
 
   build() {
     Row() {
       Column() {
-        Text(`Hello ${username}!`)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
+        TabBar({ username: username })
       }
       .width('100%')
     }

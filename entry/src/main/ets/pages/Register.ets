@@ -68,4 +68,7 @@ struct Register {
     }
     .height('100%')
   }
+  onPageShow() {
+    router.clear();
+  }
 }
